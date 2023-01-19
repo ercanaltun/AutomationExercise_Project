@@ -1,16 +1,17 @@
 package tests.UITests.us01_RegisterUser;
 
 import org.testng.annotations.Test;
+import pages.Nihat;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 
 public class Register {
-    Nihat nihatPage = new Nihat();
+   Nihat nihat= new Nihat();
     @Test
     public void TC01() {
        Driver.getDriver().get(ConfigReader.getProperty("url"));
-       nihatPage.SignLoginButton.click();
+       nihat.SignLoginButton.click();
 
 
     }
