@@ -34,5 +34,6 @@ public class PositiveTest  {
         //9.Verify that 'ACCOUNT DELETED!' is visible
         assertTrue(hatem.accountDelete.isDisplayed());
 
+
     }
 }
