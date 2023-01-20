@@ -25,4 +25,39 @@ public class Ercan {
     @FindBy(xpath="(//*[text()='Your email or password is incorrect!'])[1]")
     public  WebElement incorrectEmailOrPassword;
 
+<<<<<<< HEAD
+=======
+    //Sende olmasan biz nasil halledecez bu kadar isi ercan abi :)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ercan
 }
