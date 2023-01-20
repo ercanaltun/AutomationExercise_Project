@@ -65,6 +65,5 @@ public class Register {
         nihatPage.DeleteContinue.click();
         // closes the page
         Driver.closeDriver();
-
     }
 }
