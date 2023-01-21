@@ -6,18 +6,15 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.Ercan;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethods;
-import utilities.TestBaseBeforeMethodAfterMethod;
+import utilities.*;
 
 import static org.testng.AssertJUnit.assertTrue;
 
-public class NegativeTests {
+public class NegativeTests extends TestBaseBeforeAfterClass {
       Ercan ercanPage=new Ercan();
       Actions actions=new Actions(Driver.getDriver());
 
-    @Test
+    @Test(groups = "gp1")
     public void negative1() {
         //Enter with incorrect email and password
 
@@ -34,11 +31,11 @@ public class NegativeTests {
 
     }
 
-    @Test
+    @Test(groups = "gp1")
     public void negative2(){
         //Enter with incorrect email and true password
         Driver.getDriver().get(ConfigReader.getProperty("url"));
-        ReusableMethods.waitFor(10);
+        ReusableMethods.waitFor(3);
         assertTrue(ercanPage.signup_login.isDisplayed());
 
         ercanPage.signup_login.click();
@@ -51,7 +48,7 @@ public class NegativeTests {
         Driver.closeDriver();
     }
 
-    @Test
+    @Test(groups = "gp1")
     public void negative3(){
         //Enter with  true email and  incorrectpassword
 
