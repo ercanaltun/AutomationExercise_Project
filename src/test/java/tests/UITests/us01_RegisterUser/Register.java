@@ -53,7 +53,6 @@ public class Register {
         nihatPage.AccountCreated.isDisplayed();
         // Click 'Continue' button
         nihatPage.ContinueButton.click();
-        //nihatPage.CloseButton.click();
         Driver.getDriver().navigate().refresh();
         nihatPage.ContinueButton.click();
         // Verify that 'Logged in as username' is visible

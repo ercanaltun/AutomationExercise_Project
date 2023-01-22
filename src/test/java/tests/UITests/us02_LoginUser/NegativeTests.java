@@ -17,7 +17,7 @@ public class NegativeTests {
       Ercan ercanPage=new Ercan();
       Actions actions=new Actions(Driver.getDriver());
 
-    @Test(priority = 1)
+    @Test
     public void negative1() {
         //Enter with incorrect email and password
 
@@ -34,7 +34,7 @@ public class NegativeTests {
 
     }
 
-    @Test(dependsOnMethods = "negative1")
+    @Test
     public void negative2(){
         //Enter with incorrect email and true password
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -51,7 +51,7 @@ public class NegativeTests {
         Driver.closeDriver();
     }
 
-    @Test(dependsOnMethods = "negative2")
+    @Test
     public void negative3(){
         //Enter with  true email and  incorrectpassword
 
