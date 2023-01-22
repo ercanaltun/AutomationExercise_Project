@@ -1,9 +1,7 @@
-package tests.UITests.us02_LoginUser;
+package tests.UITests.us02;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.Ercan;
 import utilities.*;

@@ -1,10 +1,9 @@
-package tests.UITests.us02_LoginUser;
+package tests.UITests.us02;
 
 import org.testng.annotations.Test;
 import pages.Hatem;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.TestBaseBeforeMethodAfterMethod;
 
 import static org.testng.Assert.assertTrue;
 

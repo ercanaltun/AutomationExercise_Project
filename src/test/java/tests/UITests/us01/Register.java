@@ -1,4 +1,4 @@
-package tests.UITests.us01_RegisterUser;
+package tests.UITests.us01;
 
 import org.testng.annotations.Test;
 import pages.Nihat;
