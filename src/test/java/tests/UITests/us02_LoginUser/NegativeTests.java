@@ -1,4 +1,4 @@
-package tests.UITests.us02;
+package tests.UITests.us02_LoginUser;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;

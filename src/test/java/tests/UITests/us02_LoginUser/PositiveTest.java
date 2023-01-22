@@ -1,4 +1,4 @@
-package tests.UITests.us02;
+package tests.UITests.us02_LoginUser;
 
 import org.testng.annotations.Test;
 import pages.Hatem;
