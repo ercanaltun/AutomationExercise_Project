@@ -11,26 +11,4 @@ public class Ramazan {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
