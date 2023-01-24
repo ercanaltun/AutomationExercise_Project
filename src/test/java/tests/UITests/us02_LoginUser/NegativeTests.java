@@ -81,6 +81,23 @@ public class NegativeTests extends TestBaseBeforeAfterClass {
 
     }
 
+    @Test(groups = "gp1")
+    public  void negative5(){
+
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+        ReusableMethods.waitFor(3);
+        assertTrue(ercanPage.signup_login.isDisplayed());
+        ercanPage.email.sendKeys("userEmail");
+        actions.sendKeys(Keys.TAB).
+                sendKeys(ConfigReader.getProperty(" ")).
+                sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+        assertTrue(ercanPage.incorrectEmailOrPassword.isDisplayed());
+        ReusableMethods.waitFor(2);
+        Driver.closeDriver();
+
+
+    }
+
 
 
 }
