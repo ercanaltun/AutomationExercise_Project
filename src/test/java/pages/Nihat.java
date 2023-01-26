@@ -17,7 +17,6 @@ public class Nihat {
 
     @FindBy(xpath = "//*[@id='header']")
     public WebElement Anasayfa;
-
     @FindBy(xpath = "(//h2)[3]")
     public WebElement NewUser;
 
