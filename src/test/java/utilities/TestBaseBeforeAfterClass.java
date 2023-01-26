@@ -27,5 +27,8 @@ public abstract class TestBaseBeforeAfterClass {
     public void tearDown() throws InterruptedException {
      //   Thread.sleep(3000);
         driver.quit();
+
+
     }
+
 }

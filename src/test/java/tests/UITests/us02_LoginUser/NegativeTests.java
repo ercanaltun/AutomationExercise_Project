@@ -55,7 +55,7 @@ public class NegativeTests {
         //Enter with  true email and  incorrectpassword
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
-        ReusableMethods.waitFor(5);
+        ReusableMethods.waitFor(3);
         assertTrue(ercanPage.signup_login.isDisplayed());
 
         ercanPage.signup_login.click();
@@ -66,6 +66,39 @@ public class NegativeTests {
         assertTrue(ercanPage.incorrectEmailOrPassword.isDisplayed());
         ReusableMethods.waitFor(2);
         Driver.closeDriver();
+
+    }
+
+    @Test(groups = "gp1")
+    public void negative4(){
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+        ReusableMethods.waitFor(3);
+        assertTrue(ercanPage.signup_login.isDisplayed());
+        ercanPage.email.sendKeys(" ");
+        actions.sendKeys(Keys.TAB).
+                sendKeys(ConfigReader.getProperty("incorrectPassword")).
+                sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+        assertTrue(ercanPage.incorrectEmailOrPassword.isDisplayed());
+        ReusableMethods.waitFor(2);
+        Driver.closeDriver();
+
+
+    }
+
+    @Test(groups = "gp1")
+    public  void negative5(){
+
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+        ReusableMethods.waitFor(3);
+        assertTrue(ercanPage.signup_login.isDisplayed());
+        ercanPage.email.sendKeys("userEmail");
+        actions.sendKeys(Keys.TAB).
+                sendKeys(ConfigReader.getProperty(" ")).
+                sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+        assertTrue(ercanPage.incorrectEmailOrPassword.isDisplayed());
+        ReusableMethods.waitFor(2);
+        Driver.closeDriver();
+
 
     }
 

@@ -28,10 +28,11 @@ public class PositiveTest  {
         assertTrue(hatem.Logged_in_as.isDisplayed());
 
         hatem.Delete_account.click();
-        hatem.wievBox.click();
+
 
         assertTrue(hatem.accountDelete.isDisplayed());
 
 
     }
+
 }
