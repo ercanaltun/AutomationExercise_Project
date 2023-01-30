@@ -82,4 +82,16 @@ public class Nihat {
 
     @FindBy(xpath = "//*[@class='fa fa-list']")
     public WebElement ApiTest;
+
+    @FindBy(xpath = "//*[text()='Signup']")
+    public WebElement SignupButton;
+
+    @FindBy(xpath = "(//*[@type='email'])[2]")
+    public WebElement MailAdress;
+
+    @FindBy(xpath = "//*[text()='Email Address already exist!']")
+    public WebElement VerifyErrorEmail;
+
+    @FindBy(xpath = "(//h2)[4]")
+    public WebElement LoginAccount;
 }
