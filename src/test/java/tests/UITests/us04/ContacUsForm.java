@@ -23,5 +23,6 @@ public class ContacUsForm {
         nihatpage.FormGorunurlugu.isDisplayed();
         // Close page
         Driver.closeDriver();
+
     }
 }

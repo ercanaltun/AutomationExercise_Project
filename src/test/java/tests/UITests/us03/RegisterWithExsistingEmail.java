@@ -29,5 +29,6 @@ public class RegisterWithExsistingEmail {
         nihatPage.VerifyErrorEmail.isDisplayed();
        // Close page
         Driver.closeDriver();
+
     }
 }
