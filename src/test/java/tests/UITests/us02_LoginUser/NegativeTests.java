@@ -17,7 +17,7 @@ public class NegativeTests {
       Ercan ercanPage=new Ercan();
       Actions actions=new Actions(Driver.getDriver());
 
-    @Test(priority = 1)
+
     public void negative1() {
         //Enter with incorrect email and password
 
@@ -100,7 +100,10 @@ public class NegativeTests {
         Driver.closeDriver();
 
 
+
     }
+
+
 
 
 
