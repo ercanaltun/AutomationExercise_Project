@@ -15,6 +15,7 @@ public class Register {
     Actions actions = new Actions(Driver.getDriver());
     @Test(priority = 1)
     public void TC01() {
+        // Navigate to url
        Driver.getDriver().get(ConfigReader.getProperty("url"));
        //Verify that home page is visible successfully
         nihatPage.Anasayfa.isDisplayed();
@@ -67,8 +68,6 @@ public class Register {
         nihatPage.DeleteContinue.click();
         // closes the page
         Driver.closeDriver();
-
-
 
     }
 

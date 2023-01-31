@@ -17,7 +17,6 @@ public class Nihat {
 
     @FindBy(xpath = "//*[@id='header']")
     public WebElement Anasayfa;
-
     @FindBy(xpath = "(//h2)[3]")
     public WebElement NewUser;
 
@@ -62,4 +61,37 @@ public class Nihat {
 
     @FindBy(xpath = "//*[@class='btn btn-primary']")
     public WebElement DeleteContinue;
+
+    @FindBy(xpath = "//*[@type='email']")
+    public WebElement EmailButton;
+
+    @FindBy(xpath = "//*[@class='fa fa-user']")
+    public WebElement LoginGorunurlugu;
+
+    @FindBy(xpath = "//*[@class='fa fa-lock']")
+    public WebElement LogoutButton;
+
+    @FindBy(xpath = "//*[@class='fa fa-envelope']")
+    public WebElement ContactUsButton;
+
+    @FindBy(xpath = "//*[@class='title text-center']")
+    public WebElement FormGorunurlugu;
+
+    @FindBy(xpath = "//*[@class='fa fa-list']")
+    public WebElement TestCase;
+
+    @FindBy(xpath = "//*[@class='fa fa-list']")
+    public WebElement ApiTest;
+
+    @FindBy(xpath = "//*[text()='Signup']")
+    public WebElement SignupButton;
+
+    @FindBy(xpath = "(//*[@type='email'])[2]")
+    public WebElement MailAdress;
+
+    @FindBy(xpath = "//*[text()='Email Address already exist!']")
+    public WebElement VerifyErrorEmail;
+
+    @FindBy(xpath = "(//h2)[4]")
+    public WebElement LoginAccount;
 }

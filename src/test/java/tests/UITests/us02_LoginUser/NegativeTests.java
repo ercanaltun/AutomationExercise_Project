@@ -2,19 +2,22 @@ package tests.UITests.us02_LoginUser;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.Ercan;
-import utilities.*;
+import utilities.ConfigReader;
+import utilities.Driver;
+import utilities.ReusableMethods;
+import utilities.TestBaseBeforeMethodAfterMethod;
 
 import static org.testng.AssertJUnit.assertTrue;
 
-public class NegativeTests extends TestBaseBeforeAfterClass {
+public class NegativeTests {
       Ercan ercanPage=new Ercan();
       Actions actions=new Actions(Driver.getDriver());
 
 
-
-    @Test(groups = "gp1")
     public void negative1() {
         //Enter with incorrect email and password
 
@@ -31,13 +34,12 @@ public class NegativeTests extends TestBaseBeforeAfterClass {
 
     }
 
-    @Test(groups = "gp1")
+    @Test(dependsOnMethods = "negative1")
     public void negative2(){
         //Enter with incorrect email and true password
         Driver.getDriver().get(ConfigReader.getProperty("url"));
-        ReusableMethods.waitFor(3);
+        ReusableMethods.waitFor(10);
         assertTrue(ercanPage.signup_login.isDisplayed());
-
         ercanPage.signup_login.click();
         ercanPage.email.sendKeys(ConfigReader.getProperty("incorrectEmail"));
         actions.sendKeys(Keys.TAB).
@@ -48,7 +50,7 @@ public class NegativeTests extends TestBaseBeforeAfterClass {
         Driver.closeDriver();
     }
 
-    @Test(groups = "gp1")
+    @Test(dependsOnMethods = "negative2")
     public void negative3(){
         //Enter with  true email and  incorrectpassword
 
