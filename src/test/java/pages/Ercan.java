@@ -119,7 +119,7 @@ public class Ercan {
     @FindBy(xpath="//*[text()='Pay and Confirm Order']")
     public WebElement payAndConfirmOrderButton;
 
-    @FindBy(xpath="(//div[@class='alert-success alert'])[1]")
+    @FindBy(xpath="(//div[@class='col-md-12 form-group'])[1]")
     public WebElement successMessage;
 
     @FindBy(xpath="//*[text()=' Delete Account']")
