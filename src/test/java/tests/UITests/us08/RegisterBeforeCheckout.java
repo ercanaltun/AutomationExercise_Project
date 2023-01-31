@@ -10,6 +10,8 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.io.IOException;
+
 import static org.testng.Assert.*;
 
 public class RegisterBeforeCheckout {
@@ -20,7 +22,7 @@ Actions actions=new Actions(Driver.getDriver());
 Faker faker=new Faker();
 
 @Test
-    public void TC01(){
+    public void TC01() throws IOException, InterruptedException {
 
    Driver.getDriver().get(ConfigReader.getProperty("url"));
 
@@ -120,15 +122,19 @@ Faker faker=new Faker();
             sendKeys(faker.phoneNumber().phoneNumber()).
             sendKeys(Keys.TAB).sendKeys("111").
             sendKeys(Keys.TAB).sendKeys("22").
-            sendKeys(Keys.TAB).sendKeys("2028").
+            sendKeys(Keys.TAB).sendKeys("2028").perform();
 
      //Click 'Pay and Confirm Order' button
-            sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+           ReusableMethods.waitFor(1);
+           ercanPage.payAndConfirmOrderButton.click();
+           Thread.sleep(10000);
+
+
 
 
      // Verify success message 'Your order has been placed successfully!'
-     // assertTrue(ercanPage.successMessage.isDisplayed());
-    // ReusableMethods.waitFor(2);
+      ReusableMethods.getScreenshot("message");
+      ReusableMethods.waitFor(2);
 
 
      //Click 'Delete Account' button
