@@ -137,7 +137,6 @@ Faker faker=new Faker();
     ercanPage.accountDeletedContinueButton.click();
 
 
-
 }
 
 
