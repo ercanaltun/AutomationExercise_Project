@@ -12,6 +12,8 @@ public class NegativeTests extends TestBaseBeforeAfterClass {
       Ercan ercanPage=new Ercan();
       Actions actions=new Actions(Driver.getDriver());
 
+
+
     @Test(groups = "gp1")
     public void negative1() {
         //Enter with incorrect email and password

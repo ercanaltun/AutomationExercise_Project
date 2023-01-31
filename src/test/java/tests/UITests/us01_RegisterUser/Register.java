@@ -29,6 +29,8 @@ public class Register {
         // Verify that 'ENTER ACCOUNT INFORMATION' is visible
         nihatPage.EnterAccount.isDisplayed();
     }
+
+
     @Test(dependsOnMethods = "TC01")
     public void TC02 () {
         // Fill details: Title, Name, Email, Password, Date of birth
@@ -66,5 +68,10 @@ public class Register {
         // closes the page
         Driver.closeDriver();
 
+
+
     }
+
+
+
 }
