@@ -112,6 +112,7 @@ Faker faker=new Faker();
     ercanPage.comment.sendKeys(faker.dragonBall().character());
     actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
 
+
     //Enter payment details: Name on Card, Card Number, CVC, Expiration date
     ercanPage.payAndConfirmOrderButton.click();
     actions.sendKeys(faker.name().
@@ -129,8 +130,10 @@ Faker faker=new Faker();
      // assertTrue(ercanPage.successMessage.isDisplayed());
     // ReusableMethods.waitFor(2);
 
+
      //Click 'Delete Account' button
      ercanPage.deleteAccountButton.click();
+
 
     //Verify 'ACCOUNT DELETED!' and click 'Continue' button
     assertTrue(ercanPage.accountDeletedVisible.isDisplayed());
