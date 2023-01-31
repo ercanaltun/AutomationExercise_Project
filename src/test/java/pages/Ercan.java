@@ -134,17 +134,4 @@ public class Ercan {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
