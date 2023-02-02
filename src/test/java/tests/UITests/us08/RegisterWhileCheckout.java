@@ -92,5 +92,7 @@ Faker faker=new Faker();
        assertTrue( ercanPage.accountDeletedVisible.isDisplayed());
        ercanPage.accountDeletedContinueButton.click();
 
+        Driver.quitDriver();
+
     }
 }

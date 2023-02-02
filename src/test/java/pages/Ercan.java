@@ -132,6 +132,45 @@ public class Ercan {
     public WebElement accountDeletedContinueButton;
 
 
+    @FindBy(xpath="//*[@data-product-id='1']")
+    public WebElement xButton;
+
+    @FindBy(xpath="//tbody/tr[@id='product-1']")
+    public WebElement removeProductFromCart;
+
+    @FindBy(xpath="//*[text()='Category']")
+    public WebElement catagory;
+
+    @FindBy(xpath="(//*[@data-toggle='collapse'])[1]")
+    public WebElement catagoryWomen;
+
+    @FindBy(xpath="//*[text()='Tops ']")
+    public WebElement tops;
+
+    @FindBy(xpath="//*[text()='Women > Tops']")
+    public WebElement topsDisplay;
+
+    @FindBy(xpath="//*[text()='Women - Tops Products']")
+    public WebElement topsProducts;
+
+    @FindBy(xpath="//*[text()='Brands']")
+    public WebElement brands;
+
+    @FindBy(xpath="//*[text()=' Products']")
+    public WebElement products;
+
+    @FindBy(xpath="//*[text()='Polo']")
+    public WebElement polo;
+
+    @FindBy(xpath="//*[text()='Brand - Polo Products']")
+    public WebElement poloProducts;
+
+    @FindBy(xpath="//*[text()='H&M']")
+    public WebElement hm;
+
+    @FindBy(xpath="//*[@class='features_items']")
+    public WebElement hmProducts;
+
 
 
 
