@@ -7,10 +7,11 @@ import pages.Ercan;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import static org.testng.AssertJUnit.*;
 
-public class ViewCategoryProducts {
+public class ViewCategoryProducts extends TestBaseRapor {
 Ercan ercanPage=new Ercan();
 Actions actions=new Actions(Driver.getDriver());
 @Test
