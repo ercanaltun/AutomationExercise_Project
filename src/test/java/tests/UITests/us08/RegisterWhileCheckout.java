@@ -8,10 +8,11 @@ import pages.Ercan;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import static org.testng.Assert.*;
 
-public class RegisterWhileCheckout {
+public class RegisterWhileCheckout extends TestBaseRapor {
 Ercan ercanPage=new Ercan();
 Actions actions=new Actions(Driver.getDriver());
 Faker faker=new Faker();

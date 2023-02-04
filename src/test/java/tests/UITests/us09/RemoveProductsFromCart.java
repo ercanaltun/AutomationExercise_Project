@@ -7,10 +7,11 @@ import pages.Ercan;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import static org.testng.Assert.*;
 
-public class RemoveProductsFromCart {
+public class RemoveProductsFromCart extends TestBaseRapor {
 
    Ercan ercanPage=new Ercan();
 
