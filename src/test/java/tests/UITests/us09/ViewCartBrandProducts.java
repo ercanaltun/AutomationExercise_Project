@@ -6,10 +6,11 @@ import pages.Ercan;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import static org.testng.AssertJUnit.*;
 
-public class ViewCartBrandProducts {
+public class ViewCartBrandProducts extends TestBaseRapor {
 
 Ercan ercanPage=new Ercan();
 Actions actions=new Actions(Driver.getDriver());
