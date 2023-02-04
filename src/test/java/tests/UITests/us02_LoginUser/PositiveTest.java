@@ -4,10 +4,11 @@ import org.testng.annotations.Test;
 import pages.Hatem;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
 import static org.testng.Assert.assertTrue;
 
-public class PositiveTest  {
+public class PositiveTest extends TestBaseRapor {
     Hatem hatem=new Hatem();
     @Test
     public void PositiveTest() {

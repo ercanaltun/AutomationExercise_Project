@@ -6,14 +6,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.Ercan;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethods;
-import utilities.TestBaseBeforeMethodAfterMethod;
+import utilities.*;
 
 import static org.testng.AssertJUnit.assertTrue;
 
-public class NegativeTests {
+public class NegativeTests extends TestBaseRapor {
       Ercan ercanPage=new Ercan();
       Actions actions=new Actions(Driver.getDriver());
 

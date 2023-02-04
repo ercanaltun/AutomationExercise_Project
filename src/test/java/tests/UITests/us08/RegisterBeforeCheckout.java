@@ -9,12 +9,13 @@ import pages.Ercan;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import java.io.IOException;
 
 import static org.testng.Assert.*;
 
-public class RegisterBeforeCheckout {
+public class RegisterBeforeCheckout extends TestBaseRapor {
 
 Ercan ercanPage=new Ercan();
 Actions actions=new Actions(Driver.getDriver());
