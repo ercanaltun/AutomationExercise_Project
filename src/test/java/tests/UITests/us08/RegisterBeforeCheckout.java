@@ -24,11 +24,14 @@ Faker faker=new Faker();
 
 @Test
     public void TC01() throws IOException, InterruptedException {
+ extentTest=extentReports.createTest("User should Register while checkout");
 
    Driver.getDriver().get(ConfigReader.getProperty("url"));
+   extentTest.info("user navigate to the url successfully");
 
-    //Verify that home page is visible successfully
+
    assertTrue(ercanPage.signup_login.isDisplayed());
+   extentTest.info("Home page is display successfully");
 
    // Add products to cart
     actions.sendKeys(Keys.PAGE_DOWN).perform();
@@ -39,20 +42,26 @@ Faker faker=new Faker();
     ercanPage.addTocart2.click();
     ReusableMethods.waitFor(3);
     ercanPage.continueShopping.click();
+    extentTest.info("User should Add products to cart");
 
     //go to Cart
     actions.sendKeys(Keys.PAGE_UP).perform();
     ReusableMethods.waitFor(2);
     ercanPage.cartOnHomePage.click();
+ extentTest.info("User should go to cart");
 
     //Verify that cart page is displayed
     assertTrue(ercanPage.cartOnHomePageIsDisplay.isDisplayed());
+ extentTest.info("cart page should be displayed");
 
     //Click Proceed To Checkout
     ercanPage.proceedToCheckout.click();
+ extentTest.info("User should Click Proceed To Checkout");
+
 
     //Click 'Register / Login' button
     ercanPage.registerLogin.click();
+ extentTest.info("User should Click 'Register / Login' button");
 
     //Fill all details in Signup and create account
     ercanPage.newUserSignUpName.sendKeys(faker.name().name());
@@ -89,10 +98,12 @@ Faker faker=new Faker();
             sendKeys(faker.address().zipCode()).sendKeys(Keys.PAGE_DOWN).perform();
     ercanPage.mobileNumber.sendKeys(faker.phoneNumber().phoneNumber());
     ercanPage.enterAccountInformationCreateAccountButton.click();
+ extentTest.info("User should Fill all details in Signup and create account");
 
     //Verify 'ACCOUNT CREATED!' and click 'Continue' button
     assertTrue(ercanPage.accountCreatedVisible.isDisplayed());
     ercanPage.accountCreatedContinueButton.click();
+ extentTest.info("User should create account");
 
     Driver.getDriver().navigate().refresh();
     ReusableMethods.waitFor(2);
@@ -100,20 +111,25 @@ Faker faker=new Faker();
 
     //Verify ' Logged in as username' at top
     assertTrue(ercanPage.loggedInAUserName.isDisplayed());
+ extentTest.info("Username should be visible in the Logged in as username");
 
     //Click 'Cart' button
     ercanPage.cartOnHomePage.click();
+ extentTest.info("User should Click 'Cart' button");
 
     //Click 'Proceed To Checkout' button
     ercanPage.proceedToCheckout.click();
+    extentTest.info("User should Click 'Proceed To Checkout' button");
 
     //Verify Address Details and Review Your Order
     assertTrue(ercanPage.addressDetails.isDisplayed());
     assertTrue(ercanPage.reviewYourOrder.isDisplayed());
+    extentTest.info(" Address Details and Review Your Order should be displayed");
 
     //Enter description in comment text area and click 'Place Order'
     ercanPage.comment.sendKeys(faker.dragonBall().character());
     actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+    extentTest.info("User should Enter description in comment text area and click 'Place Order'");
 
 
     //Enter payment details: Name on Card, Card Number, CVC, Expiration date
@@ -124,27 +140,31 @@ Faker faker=new Faker();
             sendKeys(Keys.TAB).sendKeys("111").
             sendKeys(Keys.TAB).sendKeys("22").
             sendKeys(Keys.TAB).sendKeys("2028").perform();
+    extentTest.info("User should Enter Enter payment details: Name on Card, Card Number, CVC, Expiration date");
 
      //Click 'Pay and Confirm Order' button
            ReusableMethods.waitFor(1);
            ercanPage.payAndConfirmOrderButton.click();
            Thread.sleep(10000);
+    extentTest.info("User should Click 'Pay and Confirm Order' button");
 
 
 
 
      // Verify success message 'Your order has been placed successfully!'
-      ReusableMethods.getScreenshot("message");
-      ReusableMethods.waitFor(2);
+    //  ReusableMethods.getScreenshot("message");
+    //  ReusableMethods.waitFor(2);
 
 
      //Click 'Delete Account' button
      ercanPage.deleteAccountButton.click();
+    extentTest.info("User should Click 'Delete Account' button");
 
 
     //Verify 'ACCOUNT DELETED!' and click 'Continue' button
     assertTrue(ercanPage.accountDeletedVisible.isDisplayed());
     ercanPage.accountDeletedContinueButton.click();
+    extentTest.pass("User delete account and click 'Continue'button");
 
     Driver.quitDriver();
 
