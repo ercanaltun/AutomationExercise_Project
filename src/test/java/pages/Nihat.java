@@ -83,6 +83,10 @@ public class Nihat {
     @FindBy(xpath = "//*[@class='fa fa-list']")
     public WebElement ApiTest;
 
+    @FindBy(xpath = "//*[@class='form-control']")
+    public WebElement FormName;
+
+
     @FindBy(xpath = "//*[text()='Signup']")
     public WebElement SignupButton;
 
@@ -94,4 +98,7 @@ public class Nihat {
 
     @FindBy(xpath = "(//h2)[4]")
     public WebElement LoginAccount;
+
+    @FindBy(xpath = "(//h2)[1]")
+    public WebElement ContactUs;
 }
