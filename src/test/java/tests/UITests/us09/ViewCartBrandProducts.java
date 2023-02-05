@@ -17,7 +17,7 @@ Actions actions=new Actions(Driver.getDriver());
 
 
 
-  //7. On left side bar, click on any sub-category link of 'Men' category
+
   //8. Verify that user is navigated to that category page
 @Test
     public  void TC2(){
@@ -47,6 +47,19 @@ Actions actions=new Actions(Driver.getDriver());
     ReusableMethods.waitFor(1);
     String expecteddata="WOMEN - TOPS PRODUCTS";
     assertEquals(expecteddata,ercanPage.topsProducts.getText());
+
+    //7. On left side bar, click on any sub-category link of 'Men' category
+    ercanPage.catagoryMen.click();
+    ReusableMethods.waitFor(2);
+    ercanPage.catagoryMenTshirts.click();
+    Driver.getDriver().navigate().refresh();
+    ercanPage.catagoryMen.click();
+    ReusableMethods.waitFor(1);
+    ercanPage.catagoryMenTshirts.click();
+
+    //8. Verify that user is navigated to that category page
+    assertTrue(ercanPage.catagoryMenTshirtsIsVisible.isDisplayed());
+
 
     Driver.quitDriver();
 

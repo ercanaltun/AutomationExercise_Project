@@ -168,13 +168,13 @@ public class Ercan {
     @FindBy(xpath="//*[text()='H&M']")
     public WebElement hm;
 
-    @FindBy(xpath="//*[@class='features_items']")
-    public WebElement hmProducts;
+    @FindBy(xpath="(//*[@data-parent='#accordian'])[2]")
+    public WebElement catagoryMen;
 
-
-
-
-
+    @FindBy(xpath="//*[text()='Tshirts ']")
+    public WebElement catagoryMenTshirts;
+    @FindBy(xpath="//*[text()='Men - Tshirts Products']")
+    public WebElement catagoryMenTshirtsIsVisible;
 
 
 
