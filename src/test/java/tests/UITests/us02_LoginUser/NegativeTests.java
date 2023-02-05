@@ -14,7 +14,9 @@ public class NegativeTests extends TestBaseRapor {
       Ercan ercanPage=new Ercan();
       Actions actions=new Actions(Driver.getDriver());
 
-    public void negative1() {
+
+   @Test
+   public void negative1() {
         //Enter with incorrect email and password
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -25,8 +27,7 @@ public class NegativeTests extends TestBaseRapor {
                 sendKeys(ConfigReader.getProperty("incorrectPassword")).
                 sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         assertTrue(ercanPage.incorrectEmailOrPassword.isDisplayed());
-        ReusableMethods.waitFor(2);
-        Driver.closeDriver();
+
 
     }
 
@@ -43,7 +44,7 @@ public class NegativeTests extends TestBaseRapor {
                 sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         assertTrue(ercanPage.incorrectEmailOrPassword.isDisplayed());
         ReusableMethods.waitFor(2);
-        Driver.closeDriver();
+
     }
 
     @Test(dependsOnMethods = "negative2")
@@ -61,11 +62,11 @@ public class NegativeTests extends TestBaseRapor {
                 sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         assertTrue(ercanPage.incorrectEmailOrPassword.isDisplayed());
         ReusableMethods.waitFor(2);
-        Driver.closeDriver();
+
 
     }
 
-    @Test(groups = "gp1")
+    @Test(dependsOnMethods = "negative3")
     public void negative4(){
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         ReusableMethods.waitFor(3);
@@ -75,13 +76,11 @@ public class NegativeTests extends TestBaseRapor {
                 sendKeys(ConfigReader.getProperty("incorrectPassword")).
                 sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         assertTrue(ercanPage.incorrectEmailOrPassword.isDisplayed());
-        ReusableMethods.waitFor(2);
-        Driver.closeDriver();
 
 
     }
 
-    @Test(groups = "gp1")
+    @Test(dependsOnMethods = "negative4")
     public  void negative5(){
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -92,7 +91,9 @@ public class NegativeTests extends TestBaseRapor {
                 sendKeys(ConfigReader.getProperty(" ")).
                 sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         assertTrue(ercanPage.incorrectEmailOrPassword.isDisplayed());
+        
         ReusableMethods.waitFor(2);
+
         Driver.closeDriver();
 
 
