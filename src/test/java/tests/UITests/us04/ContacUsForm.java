@@ -19,10 +19,14 @@ public class ContacUsForm {
                 (ConfigReader.getProperty("nPassword")),Keys.TAB,Keys.ENTER);
         // Click on the contact us form
         nihatpage.ContactUsButton.click();
-        // contact us form appears
-        nihatpage.FormGorunurlugu.isDisplayed();
+        // contact us appears
+        nihatpage.ContactUs.isDisplayed();
+        // Enter name, email, subject and message
+        nihatpage.FormName.sendKeys("Nihat",Keys.TAB,"nhtt.25@gmail.com",
+                Keys.TAB,"Hayat Ne Garip:)",Keys.TAB,"Elbet Birgün Hersey Güzel OLacak",
+                Keys.TAB,Keys.ENTER);
         // Close page
-        Driver.closeDriver();
+       // Driver.closeDriver();
 
     }
 }
