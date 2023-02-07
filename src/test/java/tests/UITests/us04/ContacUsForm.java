@@ -25,7 +25,6 @@ public class ContacUsForm {
         nihatpage.FormName.sendKeys("Nihat",Keys.TAB,"nhtt.25@gmail.com",
                 Keys.TAB,"Hayat Ne Garip:)",Keys.TAB,"Elbet Birgün Hersey Güzel OLacak",
                 Keys.TAB,Keys.ENTER);
-
         // Close page
        // Driver.closeDriver();
 
