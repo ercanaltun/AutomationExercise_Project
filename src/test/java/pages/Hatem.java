@@ -53,7 +53,10 @@ public class Hatem {
     @FindBy(xpath = "(//h2[@class='title text-center'])[1]")                 public WebElement Recommended_Item;
     @FindBy(xpath = "(//*[@data-product-id='2'])[1]")                        public WebElement ADD_iTEM1;
     @FindBy(xpath = "(//*[@class='text-center'])[2]")                        public WebElement WievCart;
-    @FindBy(xpath = "//*[@id='header']")                                      public WebElement HomePageVisible;
+    @FindBy(xpath = "//*[@id='header']")                                     public WebElement HomePageVisible;
+    @FindBy(xpath = "//*[text()='Account Created!']")                        public WebElement AccountCreatedVisible;
+    @FindBy(xpath = "//*[@data-qa='continue-button']")                       public WebElement ContinueButton;
+    @FindBy(xpath = "//*[@class='fa fa-user']")                              public WebElement LOginVisible;
 
 
 

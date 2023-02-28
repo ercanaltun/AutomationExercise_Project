@@ -8,6 +8,7 @@ import pages.Hatem;
 import pages.Nihat;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import static org.testng.AssertJUnit.assertTrue;
 
@@ -15,7 +16,7 @@ public class DownloadInvoiceAfterPurchaseOrder {
         Hatem hatemPage = new Hatem();
         Actions actions = new Actions(Driver.getDriver());
         Faker faker=new Faker();
-    Nihat nihatPage = new Nihat();
+        Nihat nihatPage = new Nihat();
 
     @Test
     public  void test(){
@@ -39,10 +40,11 @@ public class DownloadInvoiceAfterPurchaseOrder {
                 Keys.TAB,faker.phoneNumber().phoneNumber(),Keys.TAB,
                 // Click 'Create Account button'
                 Keys.ENTER).perform();
-
-
-        //6. 'HESAP OLUŞTURULDU!'nu doğrulayın. ve 'Devam Et' düğmesini tıklayın
-        //7. Üstte "Kullanıcı adı olarak oturum açıldı"yı doğrulayın
+        assertTrue(hatemPage.AccountCreatedVisible.isDisplayed());
+        hatemPage.ContinueButton.click();
+        ReusableMethods.waitFor(3);
+        assertTrue(hatemPage.LOginVisible.isDisplayed());
+       Driver.getDriver().navigate().refresh();
         //8. Sepete ürün ekleyin
         //9. 'Sepet' düğmesine tıklayın
         //10. Sepet sayfasının görüntülendiğini doğrulayın
