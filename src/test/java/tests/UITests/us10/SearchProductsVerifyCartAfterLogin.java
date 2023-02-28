@@ -61,7 +61,10 @@ public class SearchProductsVerifyCartAfterLogin {
             assertTrue(hatemPage.visibilityCartMenu.isDisplayed());
 
 
+
+
     }
+
 
 
 }
