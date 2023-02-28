@@ -24,5 +24,10 @@ public class AddCartFromRecommendedItems {
         hatemPage.WievCart.click();
         assertTrue(hatemPage.CartVisible.isDisplayed());
         Driver.quitDriver();
+
+
+
+
    }
+
 }

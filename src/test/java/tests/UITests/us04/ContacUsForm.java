@@ -1,15 +1,21 @@
 package tests.UITests.us04;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import pages.Nihat;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class ContacUsForm {
     Nihat nihatpage = new Nihat();
     @Test
-    public void TC01 () {
+    public void TC01 () throws IOException {
         // User goes to url
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         // Click on 'Signup/ Login' button
@@ -25,6 +31,9 @@ public class ContacUsForm {
         nihatpage.FormName.sendKeys("Nihat",Keys.TAB,"nhtt.25@gmail.com",
                 Keys.TAB,"Hayat Ne Garip:)",Keys.TAB,"Elbet Birgün Hersey Güzel OLacak",
                 Keys.TAB,Keys.ENTER);
+
+
+
         // Close page
        // Driver.closeDriver();
 
