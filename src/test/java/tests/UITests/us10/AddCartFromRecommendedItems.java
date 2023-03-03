@@ -24,7 +24,7 @@ public class AddCartFromRecommendedItems {
         hatemPage.WievCart.click();
         assertTrue(hatemPage.CartVisible.isDisplayed());
         Driver.quitDriver();
-      //devami yazilmadi bitince yazilacak
+
 
 
 
