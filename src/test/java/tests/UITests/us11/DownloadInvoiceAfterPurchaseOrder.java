@@ -23,36 +23,30 @@ public class DownloadInvoiceAfterPurchaseOrder {
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         assertTrue(hatemPage.HomePageVisible.isDisplayed());
-        hatemPage.LoginButton.click();
-        hatemPage.NewUser_Name.sendKeys(faker.name().
-                               firstName(), Keys.TAB,faker.internet().emailAddress());
-        hatemPage.SignupButton.click();
-        hatemPage.radioButton.click();
-        hatemPage.PasswordField.sendKeys(faker.internet().password());
-        actions.sendKeys(Keys.TAB,"20",Keys.TAB,"july",Keys.TAB,"1985",Keys.PAGE_DOWN).perform();
-        hatemPage.clicknewsletter.click();
-        nihatPage.Optin.click();
-        nihatPage.FirstName.sendKeys(faker.name().firstName());
-        actions.sendKeys(Keys.TAB, faker.name().lastName(),Keys.TAB,"Mezunlar", Keys.TAB,
-                faker.address().fullAddress(), Keys.TAB,faker.address().zipCode(),
-                Keys.TAB,faker.address().country(),Keys.TAB,faker.address().state(),Keys.TAB,
-                faker.address().city(),Keys.TAB,faker.address().zipCode(),
-                Keys.TAB,faker.phoneNumber().phoneNumber(),Keys.TAB,
-                // Click 'Create Account button'
-                Keys.ENTER).perform();
-        assertTrue(hatemPage.AccountCreatedVisible.isDisplayed());
-        hatemPage.ContinueButton.click();
+        hatemPage.Products.click();
         ReusableMethods.waitFor(3);
-        assertTrue(hatemPage.LOginVisible.isDisplayed());
-       Driver.getDriver().navigate().refresh();
-        //8. Sepete ürün ekleyin
-        //9. 'Sepet' düğmesine tıklayın
-        //10. Sepet sayfasının görüntülendiğini doğrulayın
-        //11. Ödeme İşlemine Devam Et'i tıklayın
-        //12. Teslimat adresinin, hesap kaydı sırasında girilen adresle aynı olduğunu doğrulayın.
-        //13. Fatura adresinin, hesap kaydı sırasında girilen adresle aynı olduğunu doğrulayın.
-        //14. 'Hesabı Sil' düğmesini tıklayın
-        //15. 'HESAP SİLİNDİ!' ve 'Devam Et' düğmesini tıklayın
+        Driver.getDriver().navigate().refresh();
+
+        //4. Add products to cart
+        //5. Click 'Cart' button
+        //6. Verify that cart page is displayed
+        //7. Click Proceed To Checkout
+        //8. Click 'Register / Login' button
+        //9. Fill all details in Signup and create account
+        //10. Verify 'ACCOUNT CREATED!' and click 'Continue' button
+        //11. Verify ' Logged in as username' at top
+        //12.Click 'Cart' button
+        //13. Click 'Proceed To Checkout' button
+        //14. Verify Address Details and Review Your Order
+        //15. Enter description in comment text area and click 'Place Order'
+        //            16. Enter payment details: Name on Card, Card Number, CVC, Expiration date
+        //17. Click 'Pay and Confirm Order' button
+        //18. Verify success message 'Your order has been placed successfully!'
+        //            19. Click 'Download Invoice' button and verify invoice is downloaded successfully.
+        //20. Click 'Continue' button
+        //21. Click 'Delete Account' button
+        //22. Verify 'ACCOUNT DELETED!' and click 'Continue' button
+
     }
 
 
