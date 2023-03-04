@@ -22,10 +22,10 @@ public class Ramazan {
     @FindBy (xpath = "//*[text()='Availability:']")   public WebElement availability;
     @FindBy (xpath = "//*[text()='Condition:']")   public WebElement condition;
     @FindBy (xpath = "//*[text()='Brand:']")   public WebElement brand;
-
-
-
-
+    @FindBy (xpath = "//*[@id='search_product']")   public WebElement searchBox;
+    @FindBy (xpath = "//*[@id='submit_search']")   public WebElement submitBox;
+    @FindBy (xpath = "//*[text()='Searched Products']")   public WebElement searchProduct;
+    @FindBy (xpath = "(//*[text()='Men Tshirt'])[1]")   public WebElement searcProductsVisible;
 
 
 }
