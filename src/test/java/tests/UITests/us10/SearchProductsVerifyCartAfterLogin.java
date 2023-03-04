@@ -24,9 +24,6 @@ public class SearchProductsVerifyCartAfterLogin {
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         hatemPage.Products.click();
-        ReusableMethods.waitFor(3);
-        Driver.getDriver().navigate().refresh();
-        hatemPage.Products.click();
         assertTrue(hatemPage.SuccesfullyImage.isDisplayed());
         hatemPage.SearchProduct.sendKeys("Frozen Tops For Kids", Keys.ENTER);
         hatemPage.searchbutton.click();
