@@ -30,11 +30,27 @@ public class DownloadInvoiceAfterPurchaseOrder {
         hatemPage.AddToCartSon.click();
         hatemPage.WievCart.click();
         assertTrue(hatemPage.visibilityCartMenu.isDisplayed());
-        //7. Click Proceed To Checkout
-        //8. Click 'Register / Login' button
-        //9. Fill all details in Signup and create account
-        //10. Verify 'ACCOUNT CREATED!' and click 'Continue' button
-        //11. Verify ' Logged in as username' at top
+        hatemPage.ProceedtoCart.click();
+        hatemPage.Register_Login.click();
+        hatemPage.LoginButton.click();
+        hatemPage.NewUser_Name.sendKeys(faker.name().
+                firstName(), Keys.TAB,faker.internet().emailAddress());
+        hatemPage.SignupButton.click();
+        hatemPage.radioButton.click();
+        hatemPage.PasswordField.sendKeys(faker.internet().password());
+        actions.sendKeys(Keys.TAB,"20",Keys.TAB,"july",Keys.TAB,"1985",Keys.PAGE_DOWN).perform();
+        hatemPage.clicknewsletter.click();
+        nihatPage.Optin.click();
+        nihatPage.FirstName.sendKeys(faker.name().firstName());
+        actions.sendKeys(Keys.TAB, faker.name().lastName(),Keys.TAB,"Mezunlar", Keys.TAB,
+                faker.address().fullAddress(), Keys.TAB,faker.address().zipCode(),
+                Keys.TAB,faker.address().country(),Keys.TAB,faker.address().state(),Keys.TAB,
+                faker.address().city(),Keys.TAB,faker.address().zipCode(),
+                Keys.TAB,faker.phoneNumber().phoneNumber(),Keys.TAB,
+                             Keys.ENTER).perform();
+                hatemPage.ContinueButton.click();
+            assertTrue(hatemPage.LoggedVisible.isDisplayed());
+
         //12.Click 'Cart' button
         //13. Click 'Proceed To Checkout' button
         //14. Verify Address Details and Review Your Order
