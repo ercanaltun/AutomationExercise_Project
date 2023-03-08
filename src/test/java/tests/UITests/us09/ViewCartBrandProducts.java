@@ -1,4 +1,4 @@
-package tests.UITests.us06.us09;
+package tests.UITests.us09;
 
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
