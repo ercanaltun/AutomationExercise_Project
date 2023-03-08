@@ -34,9 +34,10 @@ public class Ramazan {
     @FindBy (xpath = "(//*[text()='1'])[2]")   public WebElement quantitySecondProduct;
     @FindBy (xpath = "(//*[text()='Rs. 500'])[2]")   public WebElement totalPriceFirstProduct;
     @FindBy (xpath = "(//*[text()='Rs. 400'])[2]")   public WebElement totalPriceSecondProduct;
-
-
-
-
-
+    @FindBy (xpath = "(//*[text()='View Product'])[1]")   public WebElement viewFirstProduct;
+    @FindBy (xpath = "(//*[@class='product-information'])[1]")   public WebElement detailsFirstProduct;
+    @FindBy (xpath = "(//*[@value='1'])[1]")   public WebElement increaseQuantityFirstProduct;
+    @FindBy (xpath = "(//*[@type='button'])[1]")   public WebElement addToCartButton;
+    @FindBy (xpath = "(//*[text()='View Cart'])[1]")   public WebElement viewCart;
+    @FindBy (xpath = "(//*[text()='4'])[1]")   public WebElement exactQuantity;
 }
