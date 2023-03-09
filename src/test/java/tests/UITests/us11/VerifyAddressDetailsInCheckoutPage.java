@@ -46,13 +46,6 @@ public class VerifyAddressDetailsInCheckoutPage {
         ReusableMethods.waitFor(3);
         assertTrue(hatemPage.LOginVisible.isDisplayed());
         Driver.getDriver().navigate().refresh();
-        //8. Sepete ürün ekleyin
-        //9. 'Sepet' düğmesine tıklayın
-        //10. Sepet sayfasının görüntülendiğini doğrulayın
-        //11. Ödeme İşlemine Devam Et'i tıklayın
-        //12. Teslimat adresinin, hesap kaydı sırasında girilen adresle aynı olduğunu doğrulayın.
-        //13. Fatura adresinin, hesap kaydı sırasında girilen adresle aynı olduğunu doğrulayın.
-        //14. 'Hesabı Sil' düğmesini tıklayın
-        //15. 'HESAP SİLİNDİ!' ve 'Devam Et' düğmesini tıklayın
+
     }
 }

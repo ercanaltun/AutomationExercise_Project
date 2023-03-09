@@ -60,7 +60,18 @@ public class Hatem {
     @FindBy(xpath = "(//*[@class='fa fa-shopping-cart'])[2]")                public WebElement AddToCartSon;
     @FindBy(xpath = "//*[@class='btn btn-default check_out']")               public WebElement ProceedtoCart;
     @FindBy(xpath = "//*[@ class='text-center'][2]")                         public WebElement Register_Login;
-    @FindBy(xpath = "(//div//ul//li)[10]")                                  public WebElement LoggedVisible;
+    @FindBy(xpath = "(//div//ul//li)[10]")                                   public WebElement LoggedVisible;
+    @FindBy(xpath = "(//div//ul//li)[3]")                                    public WebElement CartButton;
+    @FindBy(xpath = "//*[@class='address item box']")                        public WebElement AdresItemBox;
+    @FindBy(xpath = "//*[@id='cart_info']")                                  public WebElement Rewive_order;
+    @FindBy(xpath = "//textarea[@class='form-control']")                     public WebElement description;
+    @FindBy(xpath = "//*[@class='btn btn-default check_out']")               public WebElement PlaceOrder;
+    @FindBy(xpath = "//*[@class='form-control']")                            public WebElement CartName;
+    @FindBy(xpath = "//*[@id='submit']")                                     public WebElement PayAndOrder;
+    @FindBy(xpath = "//*[@class='btn btn-default check_out']")               public WebElement DownloadInvoice;
+    @FindBy(xpath = "//*[@class='btn btn-primary']")                         public WebElement OrderPlacedContinue;
+    @FindBy(xpath = "//*[@id='form']")                                       public WebElement ConfirmOrder;
+
 
 
 
