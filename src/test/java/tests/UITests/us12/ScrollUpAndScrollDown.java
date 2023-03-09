@@ -29,6 +29,10 @@ public class ScrollUpAndScrollDown {
         hatemPage.ScrollUpArrow.click();
         assertTrue(hatemPage.Full_Fledged.isDisplayed());
 
+
+
+
+
     }
 
 
