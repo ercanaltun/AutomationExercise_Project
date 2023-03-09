@@ -71,6 +71,11 @@ public class Hatem {
     @FindBy(xpath = "//*[@class='btn btn-default check_out']")               public WebElement DownloadInvoice;
     @FindBy(xpath = "//*[@class='btn btn-primary']")                         public WebElement OrderPlacedContinue;
     @FindBy(xpath = "//*[@id='form']")                                       public WebElement ConfirmOrder;
+    @FindBy(xpath = "//*[@id='susbscribe_email']")                           public WebElement Subscription;
+    @FindBy(xpath = "//a[@id='scrollUp']")                                   public WebElement ScrollUpArrow;
+    @FindBy(xpath = "(//div//div[@class='col-sm-6'])[5]")                    public WebElement Full_Fledged ;
+    @FindBy(xpath = "(//div//ul//li)[1]")                                    public WebElement HomePage ;
+    @FindBy(xpath = "//*[@id='slider-carousel']")                            public WebElement AssertipnFull_Fled ;
 
 
 

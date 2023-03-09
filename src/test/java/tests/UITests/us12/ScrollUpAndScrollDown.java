@@ -1,11 +1,15 @@
 package tests.UITests.us12;
 
 import com.github.javafaker.Faker;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import pages.Hatem;
+import pages.Nihat;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import static org.testng.AssertJUnit.assertTrue;
 
@@ -13,16 +17,18 @@ public class ScrollUpAndScrollDown {
     Hatem hatemPage = new Hatem();
     Actions actions = new Actions(Driver.getDriver());
     Faker faker=new Faker();
+    Nihat nihatPage = new Nihat();
     @Test
     public void test(){
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         assertTrue(hatemPage.HomePageVisible.isDisplayed());
+        ReusableMethods.waitFor(3);
+        JavascriptExecutor jse=(JavascriptExecutor)Driver.getDriver();
+        jse.executeScript("arguments[0].scrollIntoView(true);",hatemPage.SusbridgeScroll);
+        assertTrue(hatemPage.Subscription.isDisplayed());
+        hatemPage.ScrollUpArrow.click();
+        assertTrue(hatemPage.Full_Fledged.isDisplayed());
 
-        //4. Sayfayı aşağıya doğru kaydırın
-        //5. 'ABONELİK'in görünür olduğunu doğrulayın
-        //6. Yukarı doğru hareket etmek için sağ alt taraftaki oka tıklayın
-        //7. Sayfanın yukarı kaydırıldığını ve 'Otomasyon Mühendisleri için
-        // Tam Teşekküllü uygulama web sitesi' metninin ekranda göründüğünü doğrulayın
     }
 
 
