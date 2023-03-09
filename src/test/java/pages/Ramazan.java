@@ -40,4 +40,18 @@ public class Ramazan {
     @FindBy (xpath = "(//*[@type='button'])[1]")   public WebElement addToCartButton;
     @FindBy (xpath = "(//*[text()='View Cart'])[1]")   public WebElement viewCart;
     @FindBy (xpath = "(//*[text()='4'])[1]")   public WebElement exactQuantity;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
