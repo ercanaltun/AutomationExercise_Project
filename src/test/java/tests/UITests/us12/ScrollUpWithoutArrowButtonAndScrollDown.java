@@ -32,6 +32,12 @@ public class ScrollUpWithoutArrowButtonAndScrollDown {
         assertTrue(hatemPage.AssertipnFull_Fled.isDisplayed());
 
 
+
+
+
+
+
+
     }
 
 
