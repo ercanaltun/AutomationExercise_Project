@@ -27,8 +27,7 @@ public class AddReviewOnProduct {
         hatemPage.YourName.sendKeys("Hatem",Keys.TAB);
         hatemPage.Email_Address.sendKeys("krzmkrs36@gmail.com",Keys.TAB);
         hatemPage.riview_here.sendKeys("Write Your Review", Keys.TAB,Keys.ENTER);
-
-
+        //
     }
 
 

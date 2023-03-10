@@ -65,8 +65,6 @@ public class DownloadInvoiceAfterPurchaseOrder {
        hatemPage.OrderPlacedContinue.click();
        hatemPage.Delete_account.click();
        hatemPage.ContinueButton.click();
-
-
     }
 
 

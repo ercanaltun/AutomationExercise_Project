@@ -20,8 +20,6 @@ public class VerifyAddressDetailsInCheckoutPage {
 
     @Test
     public  void test(){
-
-
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         assertTrue(hatemPage.HomePageVisible.isDisplayed());
         hatemPage.LoginButton.click();
@@ -46,6 +44,5 @@ public class VerifyAddressDetailsInCheckoutPage {
         ReusableMethods.waitFor(3);
         assertTrue(hatemPage.LOginVisible.isDisplayed());
         Driver.getDriver().navigate().refresh();
-
     }
 }
