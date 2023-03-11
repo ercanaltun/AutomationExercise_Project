@@ -112,7 +112,7 @@ public class NegativeTests extends TestBaseRapor {
     @Test
     public  void negative5(){
         extentTest=extentReports.createTest("negative4:user should't enter with  in correct email and space character password");
-        //user should't enter with space carachter in email and correct password
+        //user should't enter with  correct email and space carachter in password
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         extentTest.info("User should navigate to url");

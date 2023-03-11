@@ -17,21 +17,29 @@ public class LogoutTests {
     public void TC01() {
         // User goes to url
         Driver.getDriver().get(ConfigReader.getProperty("url"));
+
         //Verify that home page is visible successfully
         nihatpage.Anasayfa.isDisplayed();
+
         // Click on 'Signup/ Login' button
         nihatpage.SignLoginButton.click();
+
         // Verify 'Login to your account' is visible
         nihatpage.LoginAccount.isDisplayed();
+
         // Click on 'Email' button
         nihatpage.EmailButton.sendKeys(ConfigReader.getProperty("nEmail"), Keys.TAB,
                 (ConfigReader.getProperty("nPassword")),Keys.TAB,Keys.ENTER);
+
         // successful login
         nihatpage.LoginGorunurlugu.isDisplayed();
+
         // Click on 'Logout' button
         nihatpage.LogoutButton.click();
+
         // Verify that user is navigated to login page
         nihatpage.Anasayfa.isDisplayed();
+
         // closes the page
        // Driver.closeDriver();
     }
