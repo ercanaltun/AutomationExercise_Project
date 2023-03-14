@@ -31,7 +31,6 @@ public class ScrollUpWithoutArrowButtonAndScrollDown {
         jse2.executeScript("arguments[0].scrollIntoView(true);",hatemPage.HomePage);
         assertTrue(hatemPage.AssertipnFull_Fled.isDisplayed());
 
-   ////
 
 
 
