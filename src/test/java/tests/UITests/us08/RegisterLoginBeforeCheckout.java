@@ -100,7 +100,7 @@ Faker faker=new Faker();
     ercanPage.cartOnHomePage.click();
     extentTest.info("User should Click 'Cart' button");
 
-    //Verify that cart page is displayed
+    //Click 'Cart' button
     assertTrue( ercanPage.cartOnHomePageIsDisplay.isDisplayed());
     extentTest.info("cart page should be displayed");
 
